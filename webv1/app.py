@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify, send_file, render_template
+from flask import Flask, request, jsonify, send_file, render_template,redirect, url_for
 import csv
 from datetime import datetime
 
@@ -52,6 +52,17 @@ def download():
     if not os.path.exists(CSV_FILE):
         return "CSV file not found. Please submit some data first.", 404
     return send_file(CSV_FILE, as_attachment=True)
+
+#Rest by del exsiting csv file in location
+@app.route('/reset')
+def reset():
+    if os.path.exists(CSV_FILE):
+        os.remove(CSV_FILE)
+        return redirect(url_for('home'))
+
+    
+    
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

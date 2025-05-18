@@ -41,7 +41,7 @@
     <h2>Select Option:</h2>
      <button class="btn" onclick="submitOption('Dine In')">Dine In</button>
     <button class="btn" onclick="submitOption('Take Away')">Take Away</button>
-<br><br>
+<br>
 <!--Download btn-->
 <a href="/download">
     <button>Download CSV</button>
@@ -50,11 +50,7 @@
 <a href="/reset">
     <button>Reset Database</button>
 </a>
-    {% if reset_success %}
-    <script>
-        alert('Reset successful!');
-    </script>
-    {% endif %}
+ 
 <script>
     function submitOption(option) {
         fetch('/submit', {

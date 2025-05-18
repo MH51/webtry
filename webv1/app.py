@@ -60,8 +60,13 @@ def reset():
         os.remove(CSV_FILE)
         return redirect(url_for('home'))
 
-    
-    
+@app.route('/login')
+def login():
+    return render_template('login.html')
+@app.route('/main')
+def main():
+    return render_template('main.html')      
+   
     
 
 if __name__ == '__main__':

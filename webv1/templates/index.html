@@ -24,7 +24,15 @@
             cursor: pointer;
             background-color: #3498db;
             color: white;
+            width: 200px; /* set your desired width */
+            height: 70px; /* set your desired height */
+            box-sizing: border-box; /* include padding in the size */
+            display: inline-flex; /* optional: align text centrally */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
+        
 
         .btn:hover {
             background-color: #2980b9;
@@ -35,22 +43,38 @@
             display: block;
             font-size: 16px;
         }
+        /* Style for the footer element */
+        footer {
+        background-color: #333;        /* Dark background color */
+        color: #fff;                   /* Text color */
+        padding: 20px;                 /* Space inside the footer */
+        text-align: center;            /* Center the text */
+        position: fixed;               /* Fix the footer at the bottom */
+        width: 100%;                   /* Full width */
+        bottom: 0;                     /* Stick to bottom of the viewport */
+        left: 0;                       /* Align to the left edge */
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.3); /* Optional shadow effect */
+        font-family: Arial, sans-serif; /* Font style */
+        }
+
+        /* Optional: Add hover effects for links inside footer */
+        footer a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        footer a:hover {
+        color: #ddd;
+        }
     </style>
 </head>
 <body>
+  
     <h2>Select Option:</h2>
      <button class="btn" onclick="submitOption('Dine In')">Dine In</button>
     <button class="btn" onclick="submitOption('Take Away')">Take Away</button>
-<br>
-<!--Download btn-->
-<a href="/download">
-    <button>Download CSV</button>
-</a>
-<!--Adding CSV file reset btn-->
-<a href="/reset">
-    <button>Reset Database</button>
-</a>
- 
+    <br>
+
 <script>
     function submitOption(option) {
         fetch('/submit', {
@@ -66,5 +90,8 @@
     }
 
 </script>
-    </body>
+<footer>
+<a href="/login">Login </a> <!--To login -->
+</footer>
+</body>
 </html>

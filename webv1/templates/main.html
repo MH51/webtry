@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #eef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .btn1 {
+            padding: 10px 15px;
+            font-size: 10px;
+            margin: 6px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background-color: #0c0f13;
+            color: white;
+            width: 80px;
+            height: 30px; /* set your desired height */
+            box-sizing: border-box; /* include padding in the size */
+            display: inline-flex; /* optional: align text centrally */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+                    }
+  .message {
+    font-size: 24px;
+    color: #333;
+  }
+      footer {
+        background-color: #333;        /* Dark background color */
+        color: #fff;                   /* Text color */
+        padding: 20px;                 /* Space inside the footer */
+        text-align: center;            /* Center the text */
+        position: fixed;               /* Fix the footer at the bottom */
+        width: 100%;                   /* Full width */
+        bottom: 0;                     /* Stick to bottom of the viewport */
+        left: 0;                       /* Align to the left edge */
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.3); /* Optional shadow effect */
+        font-family: Arial, sans-serif; /* Font style */
+        }
+
+        /* Optional: Add hover effects for links inside footer */
+        footer a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        footer a:hover {
+        color: #ddd;
+        }
+</style>
+</head>
+<body>
+    
+  
+  
+ <div class="buttons"></div>
+    <!--Download btn-->
+    <a href="/download">
+        <button class="btn1">Download CSV</button>
+    </a>
+    <!--Adding CSV file reset btn-->
+    <a href="/reset">
+        <button class="btn1">Reset Database</button>
+    </a>
+</div>   
+<footer>
+<a href="/">Home</a> <!--Back to Index -->
+</footer>  
+</body>
+</html>
